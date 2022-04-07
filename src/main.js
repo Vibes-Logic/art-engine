@@ -3,7 +3,7 @@
 const path = require("path");
 const isLocal = typeof process.pkg === "undefined";
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
-const fs = require("fs");
+const fs = require("react-native-fs");
 const keccak256 = require("keccak256");
 const chalk = require("chalk");
 
