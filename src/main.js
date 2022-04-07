@@ -2,17 +2,19 @@
 
 const path = require("path");
 const isLocal = typeof process.pkg === "undefined";
-const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
 const fs = require("react-native-fs");
-const keccak256 = require("keccak256");
+const basePath = fs.MainBundlePath; //isLocal ? process.cwd() : path.dirname(process.execPath);
+//const keccak256 = require("keccak256");
 const chalk = require("chalk");
 
-const { createCanvas, loadImage } = require(path.join(
+const { createCanvas, loadImage } = require("react-native-canvas"); 
+/*require(path.join(
   basePath,
   "/node_modules/canvas"
-));
+));*/
 
-console.log(path.join(basePath, "/src/config.js"));
+//console.log(path.join(basePath, "/src/config.js"));
+
 const {
   background,
   baseUri,
@@ -35,7 +37,7 @@ const {
   traitValueOverrides,
   uniqueDnaTorrance,
   useRootTraitType,
-} = require(path.join(basePath, "/src/config.js"));
+} = require("../src/config.js");
 const canvas = createCanvas(format.width, format.height);
 const ctxMain = canvas.getContext("2d");
 ctxMain.imageSmoothingEnabled = format.smoothing;

@@ -2,11 +2,13 @@
 
 const path = require("path");
 const isLocal = typeof process.pkg === "undefined";
-const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
-const { MODE } = require(path.join(basePath, "src/blendMode.js"));
+//const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
+const { MODE } = require("src/blendMode.js");
 
-const buildDir = path.join(basePath, "/build");
-const layersDir = path.join(basePath, "/layers");
+//const buildDir = path.join(basePath, "/build");
+//const layersDir = path.join(basePath, "/layers");
+const buildDir = "../build";
+const layersDir = "../layers";
 
 /*********************
  * General Generator Options
