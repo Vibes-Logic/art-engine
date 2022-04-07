@@ -1,3 +1,6 @@
+This repository is a fork of https://github.com/nftchef/art-engine altered to run in React Native.
+
+
 For general questions and help, please check and/or open a discussion in
 https://github.com/nftchef/art-engine/discussions
 
